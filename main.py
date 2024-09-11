@@ -2,7 +2,8 @@ import requests
 from lxml import html
 
 # ウェブページからHTMLデータを取得
-url = 'https://openaccess.thecvf.com/CVPR2023?day=all'
+year = 2024
+url = 'https://openaccess.thecvf.com/CVPR' + str(year) + '?day=all'
 response = requests.get(url)
 html_content = response.text
 
