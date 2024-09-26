@@ -1,16 +1,18 @@
 # cvpr-scraping
+![header image](./doc/image.png)
 
 ## environment
 
+This example is for macOS or Linux. For more information, see the [official website](https://docs.python.org/ja/3/library/venv.html).
 ```bash
 $ python -m venv .venv
-$ .\.venv\Scripts\activate
+$ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
 ## usage
 
-### do scraping and create csv file
+### scrape and create csv file
 
 For example, create csv file as "all.csv".
 
@@ -55,4 +57,16 @@ If you omit html file name, html file is saved as "list.html". At that time, you
 
 ```bash
 $ ./scraping_extract.sh
+```
+
+## specify the year to scrape
+
+By default, the program scrapes papers for the year 2024.  To change the year, change the specifing year line of program `scraping.py`.  If there have been no changes to the program since this document was written, that is line 7.
+
+```python
+def main():
+    # ウェブページからHTMLデータを取得
+    year = 2024 # <<< change year to scrape
+    url = 'https://openaccess.thecvf.com/CVPR' + str(year) + '?day=all'
+    response = requests.get(url)
 ```
