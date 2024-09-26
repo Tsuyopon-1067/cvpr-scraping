@@ -1,7 +1,6 @@
 import sys
 
-head = """
-<!DOCTYPE html>
+head = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,9 +28,14 @@ head = """
         th {
             background-color: #f8f8f8;
             font-weight: bold;
+            text-align: center;
         }
         tr:hover {
             background-color: #f5f5f5;
+        }
+        a {
+            color: black;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -43,12 +47,12 @@ head = """
             </tr>
         </thead>
            <tbody >
-           """
+"""
+
 tail = """</tbody >
     </table>
 </body>
-</html>
-"""
+</html>"""
 
 
 def generate_html(list):
